@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link href='/stylesheets/modal.css' rel="stylesheet" >
+    </head>
+
+        <body>
+            <section class="card l-center ">
+                <div class="l-container row">
+                    <input id="u_name" type="text"  placeholder="userName" class="col l12 m6"/>
+                    <input id='u_pass' type="text" placeholder="userPassword" class="col l12 m6"/>
+                    <button id="login-btn"  class="btn waves-effect waves-light waves-ripple  col l12 m12 center ">Login </button>
+            </section> 
+
+            <script>
+document.getElementById('login-btn').onclick=function(){
+    var postData = {
+        name:$('#u_name').value,
+        password:$('#u_pass').value,
+    }
+    ajax_post('http://localhost:3000/toLogin',postData);
+} /*
+   *for jq source how to build this 
+   */
+function $(tag){
+    var name = tag.substring(1);
+    if(tag.indexOf('#')>-1){
+        return document.getElementById(name)
+    }else if(tag.indexOf('.')>-1){
+        return document.getElementsByClass(name);
+    }else{
+        return document.getElementsByName(tag);
+    }
+};
+
+$.prototype.val = function(ele){
+    return ele.value();
+}
+
+function GetXmlHttpObject(){
+    var xmlHttp=null;
+    try{
+        // for Firefox, Opera 8.0+, Safari
+        xmlHttp=new XMLHttpRequest(); 
+    }
+    catch (e){
+        // for Internet Explorer
+        try{
+            xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); 
+        }
+        catch (e){
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP"); 
+        } 
+    }
+    return xmlHttp; 
+}
+
+function ajax_post(path,postData){
+
+    var postData = postData || {
+        "name1": "value1",
+        "name2": "value2"
+    };
+
+    // convert to post string 
+    postData = (function(obj){ 
+        var str = "";
+        for(var prop in obj){
+            str += prop + "=" + obj[prop] + "&" 
+        }
+        return str;
+    })(postData);
+    //获取 XMLHttpRequest 对象
+    var xhr =GetXmlHttpObject();
+    xhr.open("POST", path, true);
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                var text = xhr.responseText;
+                alert(text); 
+            } 
+        } 
+    };
+    xhr.send(postData); 
+} 
+            </script>
+        </body>
+</html>

@@ -1,0 +1,33 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.left{
+    float:left;
+}
+.right{
+    float:right;
+}
+.header{
+    height:44px;
+    width:100%;
+    line-height:44px;
+    border-bottom:1px solid #e8e8e8;
+}
+
+li{
+    margin-right:20px;
+    padding:0 10px;
+    cursor:pointer;
+}
+
+li:hover{
+    background:green;
+    color:#fff;
+}
+
