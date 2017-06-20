@@ -1,0 +1,18 @@
+<section class="l-center card ">
+    <section class="l-container row">
+        <input id="userName" type = "text" placeholder="userName">
+        <input id="password" type = "text" placeholder="password">
+        <input id="r-password" type = "text" placeholder="repeatPassword">
+        <button id="register-btn" class="btn center l12  m12 s12 col" >注册</button>
+    </section> 
+</section> 
+<script>
+$('#register-btn').onclick = function(){
+    ajax_post('http://localhost:3000/toRegister',{
+            name:$('#userName').value,
+            password:$('#password').value
+            },res=>{
+                console.log(res);
+            })
+}
+</script>

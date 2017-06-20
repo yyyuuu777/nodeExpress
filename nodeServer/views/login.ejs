@@ -1,9 +1,11 @@
 <html>
 
     <head>
-        <title>hello EJS</title>
+        <title><%= title %></title> 
+        <link href='/stylesheets/modal.css' rel="stylesheet" >
         <link rel="stylesheet" href="/stylesheets/style.css"/>
         <link rel="stylesheet" href="/stylesheets/reset.css"/>
+        <script src="/javascripts/httpConnection.js"></script>
     </head>
 
     <body>
@@ -16,10 +18,13 @@
                 <li class="right">Login</li>
             </ul>    
         </header>
-        <%- include('./auth.ejs') %>
+        <% if(path=="login"){ %>
+            <%- include('./auth.ejs') %>
+        <% } else if(path=="register") { %>  
+            <%- include('./register.ejs') %>
+        <% } %>
+
         <script>
-
-
-        </script>
+</script>
     </body>    
 </html>
