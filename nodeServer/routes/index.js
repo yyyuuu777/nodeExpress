@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 
+//for register
 router.get('/register', function(req, res, next) {
   res.render('login.ejs', {
       title: 'Express',
