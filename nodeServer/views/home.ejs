@@ -20,26 +20,29 @@
             </ul>    
         </header>
 
-        <section class="container row"> 
-            
-            <section class="card col l3">
-
+        <section class="l-container row"> 
+            <% videoList.forEach(item=>{ %> 
+            <div class="card-wrap col l3">
+            <img class='card-center-btn' src="/imgs/play.png" />
+            <section class="card "> 
                  <figure>
                         <img src="/imgs/video.jpg"/>                     
-                        <figcaption>
-                                VideoName
+                        <figcaption class="card-head">
+                            <%= item.video_source %>
                         </figcaption>
                         <ul>
-                            <li> 奔跑吧 </li>
-                            <li> 奔跑吧,兄弟 </li>
+                            <li class="card-title"> <%= item.video_name %></li>
+                            <li class="card-subtitle"> <%= item.video_introduce %></li>
 
                         </ul>
                  </figure>
                 
              </section>    
+            </div>
+
+            <% })  %>    
         
-        </section>
-        
+        </section> 
 
         <script>
 </script>

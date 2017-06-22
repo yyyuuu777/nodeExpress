@@ -32,6 +32,44 @@ router.get('/register', function(req, res, next) {
     )});
 
 
+router.get('/home', function(req, res, next) {
+
+
+    connection.query(`select * from video`,(err,rows,fields)=>{
+        console.log('the rows value is ',rows)
+        if(err||rows.length<=0){
+            console.log(err)
+            res.json({
+                status:'201',
+                msg:'get video list Error'
+            })
+        }else{
+            res.render('home.ejs', {
+                title: 'Express',
+                videoList:rows
+            })
+        }
+    })
+
+}).get('/mainList',function(req,res,next){
+    console.log('main list info ');
+    connection.query(`select * from video`,(err,rows,fields)=>{
+        console.log('the rows value is ',rows)
+        if(err||rows.length<=0){
+            console.log(err)
+            res.json({
+                status:'201',
+                msg:'get video list Error'
+            })
+        }else{
+            res.json({
+                status:'200',
+                msg:'get video list success'
+            })
+            }
+        })
+});
+
 router.get('/login', function(req, res, next) {
   res.render('login.ejs', {
       title: 'Express' ,
