@@ -13,7 +13,7 @@
         <%- include('./components/header.ejs'); %> 
         <section class="l-container row"> 
             <% videoList.forEach(item=>{ %> 
-                <div class="card-wrap col l3" onClick="toPlay(<%= item.id %>)">
+                <div class="card-wrap col l3" onClick="toPlay('<%= item.id %>')">
             <img class='card-center-btn' src="/imgs/play.png" />
             <section class="card card-margin card-hover"> 
                  <figure>

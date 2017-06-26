@@ -7,13 +7,15 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
-var movie= require('./models/movie');
 var engines = require('consolidate');
 var _= require('underscore');
 //get connection object
 //var sql = require('./public/javascripts/sqlconnect.js')
 var app = express();
-mongoose.connect('mongodb://localhost/imooc');
+var db = mongoose.connect('mongodb://127.0.0.1/study');
+var movie= require('./models/movie');
+ db.connection.on("error", function (error) {  console.log("数据库连接失败：" + error);  });
+ db.connection.on("open", function () {  console.log("------数据库连接成功！------");  });
 app.engine('jade', engines.jade);
 app.engine('html', engines.ejs);
 // view engine setup
