@@ -13,9 +13,16 @@
     "ejs": "^2.5.6",
     "express": "~4.15.2",
     "jade": "~1.11.0",
+    "mongoose": "^4.11.0",
     "morgan": "~1.8.1",
     "mysql": "^2.13.0",
-    "nodemysql": "^1.0.61",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-nodemon": "^0.4.2"
   }
 }

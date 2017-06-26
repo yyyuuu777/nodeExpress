@@ -6,10 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var mongoose = require('mongoose');
+var movie= require('./models/movie');
 var engines = require('consolidate');
+var _= require('underscore');
 //get connection object
-var sql = require('./public/javascripts/sqlconnect.js')
+//var sql = require('./public/javascripts/sqlconnect.js')
 var app = express();
+mongoose.connect('mongodb://localhost/imooc');
 app.engine('jade', engines.jade);
 app.engine('html', engines.ejs);
 // view engine setup

@@ -1,0 +1,11 @@
+.article-wrap{
+    position:absolute;
+    top:500px;
+    background:#fff;
+    z-index:10; 
+    width:80%;
+    left:0;
+    right:0;
+    margin:auto;
+}
+

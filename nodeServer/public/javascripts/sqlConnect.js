@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 console.log('connect mysql done');
-connection.query('SELECT * from person', function (error, results, fields) {
+connection.query('SELECT * from user', function (error, results, fields) {
           if (error) throw error;
           console.log('The solution is: ', results[0]);
 

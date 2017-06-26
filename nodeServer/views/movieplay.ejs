@@ -1,0 +1,48 @@
+<html>
+
+    <head>
+        <title><%= title %></title> 
+        <link href='/stylesheets/modal.css' rel="stylesheet" >
+        <link rel="stylesheet" href="/stylesheets/style.css"/>
+        <link rel="stylesheet" href="/stylesheets/reset.css"/>
+        <script src="/javascripts/httpConnection.js"></script>
+        <script src="/javascripts/util.js"></script>
+    </head>
+
+    <body> 
+        <%- include('./components/header.ejs'); %> 
+        <section class="l-container row"> 
+            <div class="row">
+                <section class="col l8">
+                    <video src="<%= videodetail.video_source%>" controls="true" type="video/mp4"> 
+                    </video>
+                    <div class="card video-des">
+                        <h3> <%= videodetail.video_name %></h3>
+                        <p><%= videodetail.video_introduce %></p>
+                    </div>   
+                </section>   
+                    <slider class="col l3 card video-relative">
+                    <h3> relative video</h3>
+                    <% videoRelative.forEach(item=>{%>
+                        <section class="item-list row ">
+                            <figure class="col l7 item-left">
+                                <img src="<%=item.video_cover%>"/>
+                            </figure>   
+                            <article class="col l5 item-right ">
+                                <p class="item-title"><%=item.video_name %></p>
+                                <p class="item-subtitle"><%= item.video_introduce%></p>
+                                <p class="item-attach">123times watch</p>
+                            </article>    
+                        </section>   
+                    <% }) %>
+                    </slider>
+                <section class="col l4"> 
+                </section>   
+            </div>
+        </section> 
+        <script>
+            var id = getParam("id");
+        </script>
+    </body>    
+</html>
+

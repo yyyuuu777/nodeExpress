@@ -1,0 +1,21 @@
+<header class="header">
+<ul>
+    <li id="to-home" class="left">Home</li>
+    <li class="left">Video</li>
+    <li id="to-article" class="left">Article</li>
+    <li class="left">About</li>
+    <li id="to-login" class="right">SIGN IN</li>
+</ul>    
+</header>
+
+<script>
+$('#to-login').onclick = function(){
+    getPage('login');
+}
+$('#to-home').onclick = function(){
+    getPage('home');
+}
+$('#to-article').onclick = function(){
+    getPage('article');
+}
+</script>

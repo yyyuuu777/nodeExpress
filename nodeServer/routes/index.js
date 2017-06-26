@@ -1,11 +1,14 @@
 var express = require('express');
 var router = express.Router();
-var connection= require('../public/javascripts/sqlconnect.js')
+//var connection= require('../public/javascripts/sqlconnect.js')
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/article', function(req, res, next) {
+  res.render('article.ejs', { title: 'Express' });
+});
 
 //for register
 router.get('/register', function(req, res, next) {
@@ -32,6 +35,65 @@ router.get('/register', function(req, res, next) {
         }
     )});
 
+router.get('/videoPlay', function(req, res, next) {
+    let id = req.query.id;
+    console.log('get the video id is ',id);
+    connection.query(`select * from video where id = ${id}`,(err,rows,fields)=>{
+    connection.query(`select * from video `,(err1,rows1,fields1)=>{
+        console.log('the rows value is ',rows)
+        if(err||rows.length<=0||rows1.length<0||err1){
+            console.log(err)
+            res.json({
+                status:'201',
+                msg:'get video list Error'
+            })
+        }else{
+            console.log('video Detail info is ',rows)
+            res.render('movieplay.ejs', {
+                title: 'Express',
+                videodetail:rows[0],
+                videoRelative:rows1
+            })
+        }
+    })
+    })
+
+})
+router.get('/home', function(req, res, next) {
+    connection.query(`select * from video`,(err,rows,fields)=>{
+        console.log('the rows value is ',rows)
+        if(err||rows.length<=0){
+            console.log(err)
+            res.json({
+                status:'201',
+                msg:'get video list Error'
+            })
+        }else{
+            res.render('home.ejs', {
+                title: 'Express',
+                videoList:rows
+            })
+        }
+    })
+
+}).get('/mainList',function(req,res,next){
+    console.log('main list info ');
+    connection.query(`select * from video`,(err,rows,fields)=>{
+        console.log('the rows value is ',rows)
+        if(err||rows.length<=0){
+            console.log(err)
+            res.json({
+                status:'201',
+                msg:'get video list Error'
+            })
+        }else{
+            res.json({
+                status:'200',
+                msg:'get video list success'
+            })
+            }
+        })
+});
 
 router.get('/login', function(req, res, next) {
   res.render('login.ejs', {
