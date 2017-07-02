@@ -29,6 +29,26 @@ section{
     background:#6c6c6c!important;
 }
 
+.l-theme-red{
+    background:#F44336;
+}
+
+.l-theme-red .l-color-theme{
+    background:#F44336;
+}
+
+
+.l-theme-orange{
+    background-color: rgba(255, 152, 0, .2);
+}
+
+.l-theme-orange .l-color-theme{
+    background-color: rgba(255, 152, 0, .2);
+}
+
+
+
+
 
 /* 
  * for special display
@@ -58,7 +78,7 @@ a{
 }
 
 .btn:hover{
-    background:gray;
+    background:#8fbc8f;
 }
 
 .l-z-1,.card{
@@ -1052,7 +1072,7 @@ img{
 }
 
 .card-padding{
-    padding:50px 30px;
+    padding:50px 30px!important;
 }
 
 video{
@@ -1089,6 +1109,7 @@ ul{
 
 .card{
     position:relative;
+    padding-bottom:1px;
 }
 
 /*
@@ -1096,13 +1117,13 @@ ul{
  */
 
 .card-title{
-    font-size:16px;
-
+    font-size:14px; 
 }
 
 .card-subtitle{
     font-size : 12px;
     color:grey;
+    margin-top:3px
 }
 
 .card-head{

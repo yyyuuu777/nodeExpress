@@ -27,7 +27,6 @@ li{
 }
 
 li:hover{
-    background:green;
-    color:#fff;
+    border-bottom:2px solid green;
 }
 

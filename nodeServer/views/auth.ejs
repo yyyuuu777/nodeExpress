@@ -5,28 +5,17 @@
         <body>
             <section class="l-center ">
                 <div class="l-container row ">
-                    <section class="col l3 offset-l4 card-padding card">
-                        <input id="u_name" type="text"  placeholder="userName" class="col l12 m6"/>
-                        <input id='u_pass' type="text" placeholder="userPassword" class="col l12 m6"/>
-                        <button id="login-btn"  class="btn waves-effect waves-light waves-ripple  col l12 m12 center ">Login </button>
-                        <button id="register-btn"  class="btn waves-effect waves-light waves-ripple  col l12 m12 center common-top">Sign up</button>
+                    <section class="col l3 offset-l4 card-padding "> 
+                    <form action="/toLogin" method="post" >
+                        <input id="u_name" type="text"   name="user_name" placeholder="userName" class="col l12 m6"/>
+                        <input id='u_pass' type="text"  name="user_password" placeholder="userPassword" class="col l12 m6"/>
+                        <button  id="login-btn"  type="submit" class="btn waves-effect waves-light waves-ripple  col l12 m12 center ">Login </button>
+                        <button id="register-btn" type="button" onClick="window.location.href='/register'" class="btn waves-effect waves-light waves-ripple  col l12 m12 center common-top">Sign up</button>
+                    </form>
                     </section>
             </section> 
 
-            <script>
-document.getElementById('login-btn').onclick=function(){
-    var postData = {
-        name:$('#u_name').value,
-        password:$('#u_pass').value,
-    }
-    ajax_post('http://localhost:3000/toLogin',postData,res=>{
-            res.status==200&&getPage('home')||alert(res.msg);
-            });
-}
-document.getElementById('register-btn').onclick=function(){
-    getPage('register')
-}
-/*
+ <script> /*
  *for jq source how to build this 
  */
 function $(tag){

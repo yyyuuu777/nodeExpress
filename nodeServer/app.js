@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var index = require('./routes/index');
 var users = require('./routes/users');
 var mongoose = require('mongoose');
 var engines = require('consolidate');
@@ -19,6 +18,9 @@ var movie= require('./models/movie');
  db.connection.on("open", function () {  console.log("------数据库连接成功！------");  });
 app.engine('jade', engines.jade);
 app.engine('html', engines.ejs);
+var Filter = require('./routes/interruptfilter/filter.js');
+//new Filter()
+var index = require('./routes/index');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 //app.set('view engine', 'jade');
