@@ -1,0 +1,22 @@
+[2017-07-03 21:37:48.557] [WARN] http - ::1 - - "GET /home HTTP/1.1" 304 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.625] [WARN] http - ::1 - - "GET /stylesheets/modal.css HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.628] [WARN] http - ::1 - - "GET /stylesheets/style.css HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.633] [WARN] http - ::1 - - "GET /stylesheets/reset.css HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.635] [WARN] http - ::1 - - "GET /javascripts/httpConnection.js HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.639] [WARN] http - ::1 - - "GET /javascripts/util.js HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.644] [WARN] http - ::1 - - "GET /imgs/play.png HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.653] [WARN] http - ::1 - - "GET /imgs/video.jpg HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.664] [WARN] http - ::1 - - "GET /imgs/video1.jpg HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:37:48.672] [WARN] http - ::1 - - "GET /imgs/video4.jpg HTTP/1.1" 304 - "http://localhost:3000/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+[2017-07-03 21:41:30.247] [ERROR] app - ----test log4 js 
+[2017-07-03 21:41:43.391] [ERROR] app - ----test log4 js 
+[2017-07-03 21:43:53.598] [ERROR] app - ----test log4 js 
+[2017-07-03 21:44:56.135] [ERROR] app - ----test log4 js 
+[2017-07-03 21:45:49.376] [ERROR] app - ----test log4 js 
+[2017-07-03 21:45:49.508] [ERROR] console - (node:99264) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`
+[2017-07-03 21:45:49.529] [INFO] console - ------数据库连接成功！------
+[2017-07-03 21:46:12.716] [ERROR] app - ----test log4 js 
+[2017-07-03 21:46:12.799] [ERROR] console - (node:99324) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`
+[2017-07-03 21:46:12.822] [INFO] console - ------数据库连接成功！------
+[2017-07-03 21:54:10.395] [ERROR] console - (node:99500) DeprecationWarning: `open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`
+[2017-07-03 21:54:10.420] [INFO] console - ------数据库连接成功！------

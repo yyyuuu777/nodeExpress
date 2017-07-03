@@ -1,5 +1,12 @@
 var express = require('express');
 var path = require('path');
+//var log = require('./public/javascripts/log.js');
+var log4js = require('log4js');
+var log = log4js.getLogger("app");
+log4js.configure(__dirname + '/config/log4.json');
+// replace this with the log4js connect-logger
+// app.use(logger('dev'));
+log4js.replaceConsole();
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -11,6 +18,7 @@ var _= require('underscore');
 //get connection object
 //var sql = require('./public/javascripts/sqlconnect.js')
 var app = express();
+app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto'  }));
 var dbUrl ='mongodb://127.0.0.1/study'
 var db = mongoose.connect(dbUrl);
 var movie= require('./models/movie');
